@@ -1,8 +1,7 @@
+// SPDX-License-Identifier: Apache2
 pragma solidity ^0.8.17;
 
 import "./Node.sol";
-
-// SPDX-License-Identifier: Apache2
 
 interface ITrieDB {
     function decodeNodeKind(bytes memory encoded) external pure returns (NodeKind memory);
