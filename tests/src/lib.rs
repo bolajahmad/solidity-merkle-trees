@@ -2,6 +2,7 @@
 #![allow(unused_parens)]
 
 mod forge;
+mod merkle_patricia;
 
 use crate::forge::{execute, runner};
 use ckb_merkle_mountain_range::{
@@ -261,7 +262,7 @@ fn multi_merkle_proof() {
     let calculated = execute::<_, [u8; 32]>(
         &mut runner,
         "MerkleTests",
-        "testCalculateRoot",
+        "CalculateRoot",
         (args, leaves_with_indices),
     );
 
